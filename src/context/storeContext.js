@@ -19,7 +19,7 @@ const StoreProvider = ({ children }) => {
     })
   }, [updateStore])
 
-  return <StoreContext.Provider value={{ store }}>{children}</StoreContext.Provider>
+  return <StoreContext.Provider value={store}>{children}</StoreContext.Provider>
 }
 
 export default StoreContext

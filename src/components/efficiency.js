@@ -3,9 +3,7 @@ import React, { useContext } from "react"
 import StoreContext from "../context/storeContext"
 
 export default function Efficiency({ data }) {
-  const {
-    store: { prices },
-  } = useContext(StoreContext)
+  const { prices } = useContext(StoreContext)
 
   return (
     <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
