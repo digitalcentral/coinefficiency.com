@@ -1,0 +1,51 @@
+fragment Fee on Fee {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  withdrawFee
+  withdrawMin
+  createdBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  updatedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  publishedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  exchange {
+    ... on Exchange {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  coin {
+    ... on Coin {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  protocol {
+    ... on Protocol {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+}
