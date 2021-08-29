@@ -11,7 +11,7 @@ import Efficiency from "../components/efficiency"
 export default function IndexPage({ data }) {
   return (
     <Layout>
-      <Seo title="Home" />
+      <Seo title="Transfer cryptocurrency with greater efficiency by selecting the best exchange and protocol" />
       <Hero />
 
       <Efficiency data={data.fees.nodes} />
