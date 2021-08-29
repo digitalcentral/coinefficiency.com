@@ -64,7 +64,7 @@ export default function Hero() {
           </div>
         </div>
       </div> */}
-      <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-16 text-center">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 mt-16 text-center">
         <p>(*) Efficiency is the net amount received when withdrawing 100 USD, for a given exchange and protocol.</p>
       </div>
     </div>
