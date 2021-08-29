@@ -14,22 +14,22 @@ export default function Efficiency({ data }) {
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
                   <tr>
-                    <th scope="col" className="px-5 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th scope="col" className="px-5 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                       Exchange
                     </th>
-                    <th scope="col" className="px-5 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th scope="col" className="px-5 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                       Coin [Symbol] [Protocol]
                     </th>
-                    {/* <th scope="col" className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    {/* <th scope="col" className="px-3 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                       Symbol (Protocol)
                     </th> */}
-                    <th scope="col" className="px-5 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider hidden md:block">
+                    <th scope="col" className="px-5 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider hidden md:block">
                       Withdrawal Fee
                     </th>
-                    {/* <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    {/* <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                       Min Withdrawal
                     </th> */}
-                    <th scope="col" className="pr-5 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th scope="col" className="pr-5 py-3 text-right text-xs font-medium text-gray-700 uppercase tracking-wider">
                       Efficiency
                     </th>
                     {/* <th scope="col" className="relative px-6 py-3">
@@ -41,18 +41,18 @@ export default function Efficiency({ data }) {
                   {prices &&
                     data.map(({ id, exchange, coin, protocol, withdrawFee }, index) => (
                       <tr key={id} className={index % 2 === 0 ? "bg-white" : "bg-gray-100"}>
-                        <td className="px-5 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{exchange.name}</td>
-                        {/* <td className="px-3 py-4 whitespace-nowrap text-sm text-gray-500">{coin.name}</td> */}
-                        <td className="px-5 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <td className="px-5 py-4 whitespace-nowrap text-sm text-gray-700">{exchange.name}</td>
+                        {/* <td className="px-3 py-4 whitespace-nowrap text-sm text-gray-700">{coin.name}</td> */}
+                        <td className="px-5 py-4 whitespace-nowrap text-sm text-gray-700">
                           {coin.name} [{coin.symbol}] [{protocol.name}]
                         </td>
-                        <td className="px-5 py-4 whitespace-nowrap text-sm text-gray-500 hidden md:block">
+                        <td className="px-5 py-4 whitespace-nowrap text-sm text-gray-700 hidden md:block">
                           {withdrawFee} {coin.symbol}
                         </td>
-                        {/* <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        {/* <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
                           {withdrawMin} {coin.symbol}
                         </td> */}
-                        <td className="pr-5 py-4 whitespace-nowrap text-sm text-gray-500 text-right">
+                        <td className="pr-5 py-4 whitespace-nowrap text-sm text-gray-700 text-right">
                           {((100 * (100 / prices[coin.coingeckoId].usd - withdrawFee)) / (100 / prices[coin.coingeckoId].usd)).toLocaleString(undefined, {
                             minimumFractionDigits: 2,
                             maximumFractionDigits: 2,
