@@ -18,18 +18,18 @@ export default function Efficiency({ data }) {
                       Exchange
                     </th>
                     <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Coin
+                      Coin [Symbol] [Protocol]
                     </th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    {/* <th scope="col" className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Symbol (Protocol)
-                    </th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    </th> */}
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider hidden md:block">
                       Withdrawal Fee
                     </th>
                     {/* <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Min Withdrawal
                     </th> */}
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th scope="col" className="pr-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Efficiency
                     </th>
                     {/* <th scope="col" className="relative px-6 py-3">
@@ -42,22 +42,21 @@ export default function Efficiency({ data }) {
                     data.map(({ id, exchange, coin, protocol, withdrawFee }) => (
                       <tr key={id} className="bg-gray-50">
                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{exchange.name}</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{coin.name}</td>
+                        {/* <td className="px-3 py-4 whitespace-nowrap text-sm text-gray-500">{coin.name}</td> */}
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          {coin.symbol} ({protocol.name})
+                          {coin.name} [{coin.symbol}] [{protocol.name}]
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 hidden md:block">
                           {withdrawFee} {coin.symbol}
                         </td>
                         {/* <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           {withdrawMin} {coin.symbol}
                         </td> */}
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <td className="pr-6 py-4 whitespace-nowrap text-sm text-gray-500 text-right">
                           {((100 * (100 / prices[coin.coingeckoId].usd - withdrawFee)) / (100 / prices[coin.coingeckoId].usd)).toLocaleString(undefined, {
-                            minimumFractionDigits: 1,
-                            maximumFractionDigits: 1,
-                          })}{" "}
-                          %
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 2,
+                          })}
                         </td>
                         {/* <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                         <a href="#" className="text-indigo-600 hover:text-indigo-900">

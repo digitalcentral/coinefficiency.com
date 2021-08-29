@@ -2,16 +2,17 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { getSrc } from "gatsby-plugin-image"
 
-interface SEOProps {
-  description?: string
-  lang?: string
-  meta?: Array<{ name: string; content: string }>
-  title: string
-}
+// interface SEOProps {
+//   description?: string
+//   lang?: string
+//   meta?: Array<{ name: string; content: string }>
+//   title: string
+// }
 
-export default function Seo({ description = "", lang = "en", meta = [], title }: SEOProps) {
-  const { site }: any = useStaticQuery(
+export default function Seo({ description = "", lang = "en", meta = [], title }) {
+  const { site, logo } = useStaticQuery(
     graphql`
       query {
         site {
@@ -19,14 +20,22 @@ export default function Seo({ description = "", lang = "en", meta = [], title }:
             title
             description
             author
+            siteUrl
+          }
+        }
+        logo: file(base: { eq: "coinefficiency-logo-text.png" }) {
+          base
+          childImageSharp {
+            gatsbyImageData
           }
         }
       }
     `
   )
 
-  const metaDescription: string = description || site.siteMetadata.description
-  const defaultTitle: string = site.siteMetadata?.title
+  const metaDescription = description || site.siteMetadata.description
+  const defaultTitle = site.siteMetadata?.title
+  const defaultImage = logo.childImageSharp.gatsbyImageData
 
   return (
     <Helmet
@@ -52,6 +61,15 @@ export default function Seo({ description = "", lang = "en", meta = [], title }:
           property: `og:type`,
           content: `website`,
         },
+        {
+          property: `og:image`,
+          content: getSrc(defaultImage),
+        },
+        {
+          property: `og:url`,
+          content: site.siteMetadata.siteUrl,
+        },
+
         {
           name: `twitter:card`,
           content: `summary`,
