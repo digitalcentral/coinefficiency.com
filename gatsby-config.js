@@ -3,7 +3,7 @@ require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `Coin Efficiency`,
-    description: `Track coin efficiency. Optimise transfers in the cryptocurrency monetory ecosystem.`,
+    description: `Track coin efficiency. Optimise transfers in the cryptocurrency monetary ecosystem.`,
     author: `@michaelserres`,
     siteUrl: `https://coinefficiency.com`,
   },

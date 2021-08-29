@@ -1,7 +1,7 @@
 {
   "name": "coinefficiency.com",
   "private": true,
-  "description": "Track coin efficiency. Optimise transfers in the cryptocurrency monetory ecosystem.",
+  "description": "Track coin efficiency. Optimise transfers in the cryptocurrency monetary ecosystem.",
   "version": "0.1.0",
   "author": "Digital Central <digital@central.sc>",
   "dependencies": {
