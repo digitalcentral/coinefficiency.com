@@ -64,7 +64,6 @@ module.exports = {
         siteUrl: `https://coinefficiency.com`,
       },
     },
-    ,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
