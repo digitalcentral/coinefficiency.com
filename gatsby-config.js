@@ -64,6 +64,22 @@ module.exports = {
         siteUrl: `https://coinefficiency.com`,
       },
     },
+    ,
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [process.env.GATSBY_GTM_ID],
+        gtagConfig: {
+          // optimize_id: process.env.GATSBY_OPTIMIZE_ID,
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        pluginConfig: {
+          head: true,
+          respectDNT: true,
+        },
+      },
+    },
     `gatsby-plugin-gatsby-cloud`,
     // `gatsby-plugin-offline`,
   ],
