@@ -1,6 +1,6 @@
 # CoinEfficiency
 
-Track coin efficiency. Optimise transfers in the cryptocurrency monetary ecosystem.
+Track cryptocurrency, token and coin efficiency. Optimise transfers in the cryptocurrency monetary ecosystem. Find the best routes, select the fastest and cheapest coins for payments and transfer. [CoinEfficiency](https://coinefficiency.com)
 
 ## Stack
 
