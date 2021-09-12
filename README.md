@@ -1,9 +1,32 @@
-Code for coinefficiency.com
+# Digital Central Starter
 
-coinefficiency.com is tracking coin efficiency so one can navigate efficiently the cryptocurrency and FIAT monetory ecosystems.
+Digital Central starter for Gatsby projects. See portfolio at [Digital Central](https://digital.central.sc)
 
-git clone
+## Stack
 
+- [Gatsby](https://www.gatsbyjs.com/)
+- [Tailwind UI](https://tailwindui.com/)
+- [GraphCMS](https://graphcms.com)
+
+## Installation
+
+```
+git clone https://github.com/digitalcentral/coinefficiency.com.git
+```
+
+```
 yarn
+```
 
+```
 yarn start
+```
+
+## Environement variables
+
+.env
+
+```
+GATSBY_GRAPHCMS_ENDPOINT=
+GATSBY_GTM_ID=
+```
