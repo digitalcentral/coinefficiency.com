@@ -1,6 +1,6 @@
-# Digital Central Starter
+# CoinEfficiency
 
-Digital Central starter for Gatsby projects. See portfolio at [Digital Central](https://digital.central.sc)
+Track coin efficiency. Optimise transfers in the cryptocurrency monetary ecosystem.
 
 ## Stack
 
